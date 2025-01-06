@@ -9,13 +9,13 @@ import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import Season1 from './pages/Season1';
 import Episode from './pages/Episode';
-
-
+import Reviews from './pages/Reviews';
+import ReviewCreate from './pages/ReviewCreate';
 
 function App() {
   return (
     <Router>
-      <Container>
+      <Container> 
         <Header />
         <Navigation />
         <Routes>
@@ -23,6 +23,8 @@ function App() {
           <Route exact path="/api/login" element={<LoginPage />} />
           <Route exact path="/api/season1" element={<Season1 />} />
           <Route exact path="/api/season1/:id" element={<Episode />} />
+          <Route exact path="/api/season1/episodes/reviews" element={<Reviews />} />
+          <Route exact path="/api/season1/episodes/reviews/add" element={<ReviewCreate />} />
         </Routes>
       </Container>
     </Router>
