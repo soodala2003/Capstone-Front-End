@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -20,8 +21,12 @@ const Navigation = () => {
               navbarScroll
             >
               <NavDropdown title="Episodes" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="/api/season1">Season 1</NavDropdown.Item>
-                <NavDropdown.Item href="/api/season2">Season 2</NavDropdown.Item>
+                <NavDropdown.Item> {/* href="/api/season1" */}
+                  <Link to={`/api/season1`}>Season 1</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>  {/* href="/api/season2" */}
+                  <Link to={`/api/season2`}>Season 2</Link>
+                </NavDropdown.Item>
               </NavDropdown>
 
               <Nav.Link href="/api/reviews">Reviews</Nav.Link>
